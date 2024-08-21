@@ -1,8 +1,6 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-
 import requests
-
 
 TOKEN = '7240596142:AAFJ7KH2x9ifmKViHV0Va3Gn8h2RTXztKsU'
 API_KEY = '47f3773ad3ce31296ecf4375516389e9'
@@ -11,7 +9,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text('سلام! من ربات شما هستم.')
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text('دستورات موجود: /start، /help و /weather <شهر>')
+    await update.message.reply_text('دستورات موجود: /start، /help و /weather <شهر> ، /send_message ')
 
 
 async def weather(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
