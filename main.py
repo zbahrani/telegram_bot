@@ -9,7 +9,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text('سلام! من ربات شما هستم.')
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text('دستورات موجود: /start، /help و /weather <شهر> ، /send_message ')
+    await update.message.reply_text('دستورات موجود: /start، /help ، /weather <شهر> ، /send_message ')
 
 
 async def weather(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
