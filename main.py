@@ -1,5 +1,6 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+
 import requests
 
 TOKEN = '7240596142:AAFJ7KH2x9ifmKViHV0Va3Gn8h2RTXztKsU'
@@ -10,7 +11,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text('دستورات موجود: /start، /help ، /weather <شهر> ، /send_message ')
-
 
 async def weather(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if len(context.args) == 0:
@@ -33,7 +33,6 @@ async def weather(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text(f'وضعیت هوای {city}:\nدمای فعلی: {temp}°C\nتوضیحات: {weather_description}')
     except Exception as e:
         await update.message.reply_text('خطایی پیش آمده است. لطفاً دوباره امتحان کنید.')
-
 
 def main():
     application = ApplicationBuilder().token(TOKEN).build()
